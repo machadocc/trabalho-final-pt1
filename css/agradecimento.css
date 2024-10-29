@@ -1,0 +1,64 @@
+/* Reseta algumas propriedades padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estiliza o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Container centralizado */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos */
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+/* Parágrafos */
+p {
+    text-align: center;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* Estilização do contador */
+#contagem-regressiva {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #e67e22; /* Cor laranja */
+}
+
+/* Adicionando uma animação suave ao texto */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.container {
+    animation: fadeIn 0.8s ease-in;
+}

@@ -15,9 +15,9 @@
     </div>
 
     <script>
-    let tempo = 10;
+    let tempo = 5;
     const tempoElement = document.getElementById('tempo');
-    const idDispositivo = "<?php echo $_GET['id_dispositivo']; ?>"; // Capturando o ID do dispositivo da URL
+    const idDispositivo = "<?php echo $_GET['id_dispositivo']; ?>";
 
     const countdown = setInterval(() => {
         tempo--;
@@ -25,7 +25,7 @@
 
         if (tempo <= 0) {
             clearInterval(countdown);
-            window.location.href = 'index.php?id_dispositivo=' + idDispositivo; // Redireciona com o ID do dispositivo
+            window.location.href = 'index.php?id_dispositivo=' + idDispositivo;
         }
     }, 1000);
 </script>

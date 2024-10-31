@@ -13,7 +13,6 @@
         <h1>Dashboard de Avaliação</h1>
 
         <?php
-        // Consulta as médias das avaliações
         $queryMedia = $conexao->query("
             SELECT id_pergunta, perguntas.texto, AVG(resposta) AS media_resposta
             FROM avaliacoes
@@ -24,7 +23,6 @@
         ");
         $mediaAvaliacoes = $queryMedia->fetchAll(PDO::FETCH_ASSOC);
 
-        // Consulta todos os feedbacks
         $queryFeedback = $conexao->query("
             SELECT p.texto AS pergunta_texto, a.feedback
             FROM avaliacoes a

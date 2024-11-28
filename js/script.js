@@ -21,3 +21,34 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+let inatividadeTimeout;
+const tempoInatividade = 30000;
+
+function resetarInatividade() {
+    if (document.getElementById('avaliacao-container').style.display !== 'none') {
+        clearTimeout(inatividadeTimeout);
+        inatividadeTimeout = setTimeout(() => {
+            location.reload();
+        }, tempoInatividade);
+    }
+}
+
+document.addEventListener("mousemove", resetarInatividade);
+document.addEventListener("keydown", resetarInatividade);
+document.addEventListener("click", resetarInatividade);
+document.addEventListener("touchstart", resetarInatividade);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const telaInicial = document.getElementById('tela-inicial');
+    const container = document.querySelector('.container');
+    const avaliacaoContainer = document.getElementById('avaliacao-container');
+
+    telaInicial.addEventListener('click', () => {
+        telaInicial.style.display = 'none';
+        container.style.display = 'block';
+        avaliacaoContainer.style.display = 'block';
+
+        resetarInatividade();
+    });
+});

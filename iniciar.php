@@ -15,7 +15,6 @@
     <label for="dispositivo">Dispositivo:</label>
     <select name="id_dispositivo" id="dispositivo" required>
         <?php
-        // Carregar dispositivos do banco de dados
         $query = $conexao->query("SELECT * FROM dispositivos WHERE status = TRUE");
         $dispositivos = $query->fetchAll(PDO::FETCH_ASSOC);
 

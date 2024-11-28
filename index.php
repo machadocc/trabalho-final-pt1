@@ -26,6 +26,12 @@ $perguntas = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+<div id="tela-inicial" class="tela-inicial">
+    <img class="logo" src="http://www.hrav.com.br/wp-content/uploads/2024/08/logo.png" alt="Logo HRAV">
+    <h1>Bem-vindo(a) à Avaliação de Serviços</h1>
+    <p>Clique na tela para iniciar sua avaliação.</p>
+</div>
+    
     <div class="container">
         <img class="logo" src="http://www.hrav.com.br/wp-content/uploads/2024/08/logo.png" alt="logo-hospital">
         <h1>Avaliação de Serviços - HRAV</h1>
